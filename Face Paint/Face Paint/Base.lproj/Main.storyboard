@@ -18,24 +18,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hW-lK-OVN">
-                                <rect key="frame" x="20" y="550" width="149" height="30"/>
+                                <rect key="frame" x="75" y="387" width="149" height="30"/>
                                 <state key="normal" title="Select and Play Video"/>
                                 <connections>
                                     <segue destination="iyb-en-wFA" kind="show" id="yhR-vN-ZdR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ei2-l8-Ijb">
-                                <rect key="frame" x="493" y="550" width="87" height="30"/>
-                                <state key="normal" title="Merge Video"/>
-                                <connections>
-                                    <segue destination="dgi-8p-ErA" kind="show" id="C6V-p4-Ac6"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68H-et-nzu">
-                                <rect key="frame" x="254" y="550" width="159" height="30"/>
+                                <rect key="frame" x="65" y="431" width="159" height="30"/>
                                 <state key="normal" title="Record and Save Video"/>
                                 <connections>
                                     <segue destination="Nsh-ib-qNJ" kind="show" id="rOu-ij-UmI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ei2-l8-Ijb">
+                                <rect key="frame" x="101" y="474" width="87" height="30"/>
+                                <state key="normal" title="Merge Video"/>
+                                <connections>
+                                    <segue destination="dgi-8p-ErA" kind="show" id="C6V-p4-Ac6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -58,6 +58,15 @@
                     <view key="view" contentMode="scaleToFill" id="d9y-6Q-wzH">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxq-lo-Ipi">
+                                <rect key="frame" x="111" y="131" width="92" height="30"/>
+                                <state key="normal" title="Record Video"/>
+                                <connections>
+                                    <action selector="recordAndPlay:" destination="Nsh-ib-qNJ" eventType="touchUpInside" id="CRX-sJ-ARc"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -76,6 +85,36 @@
                     <view key="view" contentMode="scaleToFill" id="5qN-FU-fAs">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hI3-zS-rmz">
+                                <rect key="frame" x="54" y="219" width="87" height="30"/>
+                                <state key="normal" title="Load Asset 1"/>
+                                <connections>
+                                    <action selector="loadAssetOne:" destination="dgi-8p-ErA" eventType="touchUpInside" id="7Ik-Ut-Sko"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBV-UD-TR5">
+                                <rect key="frame" x="59" y="349" width="77" height="30"/>
+                                <state key="normal" title="Load Audio"/>
+                                <connections>
+                                    <action selector="loadAudio:" destination="dgi-8p-ErA" eventType="touchUpInside" id="QbE-sc-Abf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ig5-qh-GsK">
+                                <rect key="frame" x="21" y="414" width="154" height="30"/>
+                                <state key="normal" title="Merge and Save Video"/>
+                                <connections>
+                                    <action selector="mergeAndSave:" destination="dgi-8p-ErA" eventType="touchUpInside" id="end-bs-17h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylZ-YX-YJL">
+                                <rect key="frame" x="53" y="285" width="89" height="30"/>
+                                <state key="normal" title="Load Asset 2"/>
+                                <connections>
+                                    <action selector="loadAssetTwo:" destination="dgi-8p-ErA" eventType="touchUpInside" id="8ia-W6-HPR"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -127,23 +166,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QJc-ys-6bd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="389" y="-305"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="4eB-P5-UBz">
-            <objects>
-                <viewController id="H3o-nb-MbR" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="www-J6-t2J"/>
-                        <viewControllerLayoutGuide type="bottom" id="nh0-l2-kdP"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="byJ-As-0gs">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="25S-zU-hHo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
 </document>

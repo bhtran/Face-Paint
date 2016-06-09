@@ -7,7 +7,22 @@
 //
 
 #import "ViewController.h"
+#import <AVFoundation/AVFoundation.h>
+#import <CoreData/CoreData.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+#import <AssetsLibrary/AssetsLibrary.h>
+#import <MediaPlayer/MediaPlayer.h>
 
-@interface MergeVideoViewController : ViewController
+@interface MergeVideoViewController : ViewController {
+    BOOL isSelectingAssetOne;
+}
+
+@property (nonatomic, strong) AVAsset *firstAsset;
+@property (nonatomic, strong) AVAsset *secondAsset;
+@property (nonatomic, strong) AVAsset *audioAsset;
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView *activityView;
+
+-(BOOL)startMediaBrowserFromViewController:(UIViewController *)controller usingDelegate:(id)delegate;
+-(void)exportDidFinish:(AVAssetExportSession *)session;
 
 @end

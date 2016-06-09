@@ -7,7 +7,13 @@
 //
 
 #import "ViewController.h"
+#import <MediaPlayer/MediaPlayer.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+#import <AssetsLibrary/AssetsLibrary.h>
 
 @interface RecordVideoViewController : ViewController
+
+-(BOOL)startCameraControllerFromViewController:(UIViewController *)controller usingDelegate:(id )delegate;
+-(void)video:(NSString *)videoPath didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo;
 
 @end
