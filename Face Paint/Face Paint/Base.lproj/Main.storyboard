@@ -18,24 +18,59 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hW-lK-OVN">
-                                <rect key="frame" x="75" y="387" width="149" height="30"/>
+                                <rect key="frame" x="20" y="98" width="149" height="30"/>
                                 <state key="normal" title="Select and Play Video"/>
                                 <connections>
                                     <segue destination="iyb-en-wFA" kind="show" id="yhR-vN-ZdR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68H-et-nzu">
-                                <rect key="frame" x="65" y="431" width="159" height="30"/>
+                                <rect key="frame" x="20" y="136" width="159" height="30"/>
                                 <state key="normal" title="Record and Save Video"/>
                                 <connections>
                                     <segue destination="Nsh-ib-qNJ" kind="show" id="rOu-ij-UmI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ei2-l8-Ijb">
-                                <rect key="frame" x="101" y="474" width="87" height="30"/>
+                                <rect key="frame" x="20" y="174" width="87" height="30"/>
                                 <state key="normal" title="Merge Video"/>
                                 <connections>
                                     <segue destination="dgi-8p-ErA" kind="show" id="C6V-p4-Ac6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcJ-aZ-Xef">
+                                <rect key="frame" x="20" y="265" width="142" height="30"/>
+                                <state key="normal" title="Add Border To Video"/>
+                                <connections>
+                                    <segue destination="fZ4-vT-33A" kind="show" id="TVO-5S-qID"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luZ-46-ld3">
+                                <rect key="frame" x="20" y="303" width="148" height="30"/>
+                                <state key="normal" title="Add Overlay To Video"/>
+                                <connections>
+                                    <segue destination="KA2-hb-0jL" kind="show" id="nYt-lL-XB9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pB-Kc-PeH">
+                                <rect key="frame" x="20" y="341" width="148" height="30"/>
+                                <state key="normal" title="Add Subtitle To Video"/>
+                                <connections>
+                                    <segue destination="iwC-oN-kom" kind="show" id="9ji-iP-5p3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H29-mD-hBh">
+                                <rect key="frame" x="20" y="417" width="164" height="30"/>
+                                <state key="normal" title="Add Animation To Video"/>
+                                <connections>
+                                    <segue destination="WbW-bR-R9g" kind="show" id="eBs-C3-KKG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3b-j5-uHF">
+                                <rect key="frame" x="20" y="379" width="117" height="30"/>
+                                <state key="normal" title="Add Tilt To Video"/>
+                                <connections>
+                                    <segue destination="Wdy-ys-1wG" kind="show" id="Pi0-KM-2qd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -72,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0NH-OO-gfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2499" y="-305"/>
+            <point key="canvasLocation" x="3317" y="-305"/>
         </scene>
         <!--Merge Video View Controller-->
         <scene sceneID="PD5-co-RxN">
@@ -120,7 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b8w-85-8xz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1827" y="73"/>
+            <point key="canvasLocation" x="2685" y="-648"/>
         </scene>
         <!--Play Video View Controller-->
         <scene sceneID="WGO-4q-WZo">
@@ -147,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pL2-ss-gNM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1835" y="-672"/>
+            <point key="canvasLocation" x="2685" y="76"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="s0Y-3d-FKC">
@@ -165,7 +200,97 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QJc-ys-6bd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="389" y="-305"/>
+            <point key="canvasLocation" x="421" y="-305"/>
+        </scene>
+        <!--Add Overlay View Controller-->
+        <scene sceneID="yaQ-Fy-0fr">
+            <objects>
+                <viewController id="KA2-hb-0jL" customClass="AddOverlayViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SaO-P7-guF"/>
+                        <viewControllerLayoutGuide type="bottom" id="Aum-Ov-pbJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iMr-RN-RQq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ncy-eR-DxX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1117" y="1719"/>
+        </scene>
+        <!--Add Tilt View Controller-->
+        <scene sceneID="wka-EZ-BrT">
+            <objects>
+                <viewController id="Wdy-ys-1wG" customClass="AddTiltViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bk5-RQ-P9s"/>
+                        <viewControllerLayoutGuide type="bottom" id="C2j-tE-DnX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RW2-IZ-oQX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xLA-eZ-b1y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="791" y="1053"/>
+        </scene>
+        <!--Add Subtitle View Controller-->
+        <scene sceneID="hBi-hH-qXg">
+            <objects>
+                <viewController id="iwC-oN-kom" customClass="AddSubtitleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Oq-bZ-DBd"/>
+                        <viewControllerLayoutGuide type="bottom" id="yqe-Ve-9NL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ytp-5B-uwn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J1v-4y-zRH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1757" y="391"/>
+        </scene>
+        <!--Add Border View Controller-->
+        <scene sceneID="Rpb-Bm-lQy">
+            <objects>
+                <viewController id="fZ4-vT-33A" customClass="AddBorderViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZZE-lB-xoI"/>
+                        <viewControllerLayoutGuide type="bottom" id="JDv-Fe-Ku9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NYd-SX-BGq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="thM-7N-pcR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="471" y="391"/>
+        </scene>
+        <!--Add Animation View Controller-->
+        <scene sceneID="QG2-F1-DIj">
+            <objects>
+                <viewController id="WbW-bR-R9g" customClass="AddAnimationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ilr-oH-JRS"/>
+                        <viewControllerLayoutGuide type="bottom" id="XH8-cm-DUO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OBg-FV-yh8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rpw-Kt-eck" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1439" y="1053"/>
         </scene>
     </scenes>
 </document>

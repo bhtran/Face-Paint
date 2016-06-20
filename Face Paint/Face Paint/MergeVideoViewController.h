@@ -10,8 +10,9 @@
 #import <AVFoundation/AVFoundation.h>
 #import <CoreData/CoreData.h>
 #import <MobileCoreServices/MobileCoreServices.h>
-#import <AssetsLibrary/AssetsLibrary.h>
+#import <AssetsLibrary/AssetsLibrary.h> // Deprecated
 #import <MediaPlayer/MediaPlayer.h>
+#import <Photos/Photos.h>
 
 @interface MergeVideoViewController : ViewController {
     BOOL isSelectingAssetOne;

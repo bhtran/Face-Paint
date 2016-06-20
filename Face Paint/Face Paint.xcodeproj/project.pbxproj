@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		288D64701326AA886F2C9B70 /* libPods-Face Paint.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53FAB255AF13391AE518CC24 /* libPods-Face Paint.a */; };
+		A4964AA6B4348E7BDACCF5B7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A048F83F92151FD57CF9FCFB /* libPods.a */; };
 		E206101F1CFE0CFA0065EA93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E206101E1CFE0CFA0065EA93 /* main.m */; };
 		E20610221CFE0CFA0065EA93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E20610211CFE0CFA0065EA93 /* AppDelegate.m */; };
 		E20610251CFE0CFA0065EA93 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20610241CFE0CFA0065EA93 /* ViewController.m */; };
@@ -26,6 +28,12 @@
 		E20610641CFE1ADC0065EA93 /* RecordVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20610631CFE1ADC0065EA93 /* RecordVideoViewController.m */; };
 		E20610671CFE1AE90065EA93 /* MergeVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20610661CFE1AE90065EA93 /* MergeVideoViewController.m */; };
 		E20610691CFFA25F0065EA93 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E20610681CFFA25F0065EA93 /* AVKit.framework */; };
+		E27D2E5D1D18766D0037669B /* AddBorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E27D2E5C1D18766D0037669B /* AddBorderViewController.m */; };
+		E27D2E601D1876800037669B /* AddOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E27D2E5F1D1876800037669B /* AddOverlayViewController.m */; };
+		E27D2E631D1876920037669B /* AddSubtitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E27D2E621D1876920037669B /* AddSubtitleViewController.m */; };
+		E27D2E661D18769B0037669B /* AddTiltViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E27D2E651D18769B0037669B /* AddTiltViewController.m */; };
+		E27D2E691D1876A60037669B /* AddAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E27D2E681D1876A60037669B /* AddAnimationViewController.m */; };
+		E2B47AE91D0B2A63009FA846 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2B47AE81D0B2A63009FA846 /* Photos.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +54,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B94EE1467A69CD5FD170589 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		1F7CC5481C1936A76444A3B8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		53FAB255AF13391AE518CC24 /* libPods-Face Paint.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Face Paint.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A048F83F92151FD57CF9FCFB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E206101A1CFE0CFA0065EA93 /* Face Paint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Face Paint.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E206101E1CFE0CFA0065EA93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E20610201CFE0CFA0065EA93 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -76,6 +88,18 @@
 		E20610651CFE1AE90065EA93 /* MergeVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeVideoViewController.h; sourceTree = "<group>"; };
 		E20610661CFE1AE90065EA93 /* MergeVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergeVideoViewController.m; sourceTree = "<group>"; };
 		E20610681CFFA25F0065EA93 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		E26BFE7D1D0A028D00F5C4CE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		E27D2E5B1D18766D0037669B /* AddBorderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBorderViewController.h; sourceTree = "<group>"; };
+		E27D2E5C1D18766D0037669B /* AddBorderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBorderViewController.m; sourceTree = "<group>"; };
+		E27D2E5E1D1876800037669B /* AddOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddOverlayViewController.h; sourceTree = "<group>"; };
+		E27D2E5F1D1876800037669B /* AddOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddOverlayViewController.m; sourceTree = "<group>"; };
+		E27D2E611D1876920037669B /* AddSubtitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSubtitleViewController.h; sourceTree = "<group>"; };
+		E27D2E621D1876920037669B /* AddSubtitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSubtitleViewController.m; sourceTree = "<group>"; };
+		E27D2E641D18769B0037669B /* AddTiltViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTiltViewController.h; sourceTree = "<group>"; };
+		E27D2E651D18769B0037669B /* AddTiltViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTiltViewController.m; sourceTree = "<group>"; };
+		E27D2E671D1876A60037669B /* AddAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAnimationViewController.h; sourceTree = "<group>"; };
+		E27D2E681D1876A60037669B /* AddAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAnimationViewController.m; sourceTree = "<group>"; };
+		E2B47AE81D0B2A63009FA846 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2B47AE91D0B2A63009FA846 /* Photos.framework in Frameworks */,
 				E20610691CFFA25F0065EA93 /* AVKit.framework in Frameworks */,
 				E206105E1CFE10D30065EA93 /* QuartzCore.framework in Frameworks */,
 				E206105C1CFE10A20065EA93 /* MobileCoreServices.framework in Frameworks */,
@@ -90,6 +115,8 @@
 				E20610581CFE10910065EA93 /* CoreMedia.framework in Frameworks */,
 				E20610561CFE10890065EA93 /* AVFoundation.framework in Frameworks */,
 				E20610541CFE10810065EA93 /* AssetsLibrary.framework in Frameworks */,
+				A4964AA6B4348E7BDACCF5B7 /* libPods.a in Frameworks */,
+				288D64701326AA886F2C9B70 /* libPods-Face Paint.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,13 +137,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C63DCD622DFCFAD337B40E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F7CC5481C1936A76444A3B8 /* Pods.debug.xcconfig */,
+				0B94EE1467A69CD5FD170589 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E20610111CFE0CFA0065EA93 = {
 			isa = PBXGroup;
 			children = (
+				E26BFE7D1D0A028D00F5C4CE /* PrefixHeader.pch */,
 				E206101C1CFE0CFA0065EA93 /* Face Paint */,
 				E20610391CFE0CFB0065EA93 /* Face PaintTests */,
 				E20610441CFE0CFB0065EA93 /* Face PaintUITests */,
 				E206101B1CFE0CFA0065EA93 /* Products */,
+				6C63DCD622DFCFAD337B40E4 /* Pods */,
+				F417349B97AEFBDAB325153A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,18 +172,14 @@
 		E206101C1CFE0CFA0065EA93 /* Face Paint */ = {
 			isa = PBXGroup;
 			children = (
+				E206102E1CFE0CFA0065EA93 /* LaunchScreen.storyboard */,
+				E20610261CFE0CFA0065EA93 /* Main.storyboard */,
 				E20610201CFE0CFA0065EA93 /* AppDelegate.h */,
 				E20610211CFE0CFA0065EA93 /* AppDelegate.m */,
 				E20610231CFE0CFA0065EA93 /* ViewController.h */,
 				E20610241CFE0CFA0065EA93 /* ViewController.m */,
-				E206105F1CFE1AC50065EA93 /* PlayVideoViewController.h */,
-				E20610601CFE1AC50065EA93 /* PlayVideoViewController.m */,
-				E20610621CFE1ADC0065EA93 /* RecordVideoViewController.h */,
-				E20610631CFE1ADC0065EA93 /* RecordVideoViewController.m */,
-				E20610651CFE1AE90065EA93 /* MergeVideoViewController.h */,
-				E20610661CFE1AE90065EA93 /* MergeVideoViewController.m */,
-				E20610261CFE0CFA0065EA93 /* Main.storyboard */,
-				E206102E1CFE0CFA0065EA93 /* LaunchScreen.storyboard */,
+				E27D2E5A1D1874BA0037669B /* Adding overlays and animations */,
+				E27D2E591D1874780037669B /* Play, Record and Merge */,
 				E20610311CFE0CFA0065EA93 /* Info.plist */,
 				E20610291CFE0CFA0065EA93 /* Face_Paint.xcdatamodeld */,
 				E206101D1CFE0CFA0065EA93 /* Supporting Files */,
@@ -186,6 +221,46 @@
 			path = "Face PaintUITests";
 			sourceTree = "<group>";
 		};
+		E27D2E591D1874780037669B /* Play, Record and Merge */ = {
+			isa = PBXGroup;
+			children = (
+				E206105F1CFE1AC50065EA93 /* PlayVideoViewController.h */,
+				E20610601CFE1AC50065EA93 /* PlayVideoViewController.m */,
+				E20610621CFE1ADC0065EA93 /* RecordVideoViewController.h */,
+				E20610631CFE1ADC0065EA93 /* RecordVideoViewController.m */,
+				E20610651CFE1AE90065EA93 /* MergeVideoViewController.h */,
+				E20610661CFE1AE90065EA93 /* MergeVideoViewController.m */,
+			);
+			name = "Play, Record and Merge";
+			sourceTree = "<group>";
+		};
+		E27D2E5A1D1874BA0037669B /* Adding overlays and animations */ = {
+			isa = PBXGroup;
+			children = (
+				E27D2E5B1D18766D0037669B /* AddBorderViewController.h */,
+				E27D2E5C1D18766D0037669B /* AddBorderViewController.m */,
+				E27D2E5E1D1876800037669B /* AddOverlayViewController.h */,
+				E27D2E5F1D1876800037669B /* AddOverlayViewController.m */,
+				E27D2E611D1876920037669B /* AddSubtitleViewController.h */,
+				E27D2E621D1876920037669B /* AddSubtitleViewController.m */,
+				E27D2E641D18769B0037669B /* AddTiltViewController.h */,
+				E27D2E651D18769B0037669B /* AddTiltViewController.m */,
+				E27D2E671D1876A60037669B /* AddAnimationViewController.h */,
+				E27D2E681D1876A60037669B /* AddAnimationViewController.m */,
+			);
+			name = "Adding overlays and animations";
+			sourceTree = "<group>";
+		};
+		F417349B97AEFBDAB325153A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2B47AE81D0B2A63009FA846 /* Photos.framework */,
+				A048F83F92151FD57CF9FCFB /* libPods.a */,
+				53FAB255AF13391AE518CC24 /* libPods-Face Paint.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -193,9 +268,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E206104A1CFE0CFB0065EA93 /* Build configuration list for PBXNativeTarget "Face Paint" */;
 			buildPhases = (
+				705166762E3403CEEC04244A /* Check Pods Manifest.lock */,
 				E20610161CFE0CFA0065EA93 /* Sources */,
 				E20610171CFE0CFA0065EA93 /* Frameworks */,
 				E20610181CFE0CFA0065EA93 /* Resources */,
+				5BB2FFB05C4453F67264AABA /* Embed Pods Frameworks */,
+				91CF5D711A524CBAC2F4B9C5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -311,6 +389,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5BB2FFB05C4453F67264AABA /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Face Paint/Pods-Face Paint-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		705166762E3403CEEC04244A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		91CF5D711A524CBAC2F4B9C5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E20610161CFE0CFA0065EA93 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -318,11 +444,16 @@
 			files = (
 				E20610671CFE1AE90065EA93 /* MergeVideoViewController.m in Sources */,
 				E20610251CFE0CFA0065EA93 /* ViewController.m in Sources */,
+				E27D2E631D1876920037669B /* AddSubtitleViewController.m in Sources */,
+				E27D2E5D1D18766D0037669B /* AddBorderViewController.m in Sources */,
 				E20610611CFE1AC50065EA93 /* PlayVideoViewController.m in Sources */,
 				E206102B1CFE0CFA0065EA93 /* Face_Paint.xcdatamodeld in Sources */,
+				E27D2E661D18769B0037669B /* AddTiltViewController.m in Sources */,
+				E27D2E691D1876A60037669B /* AddAnimationViewController.m in Sources */,
 				E20610221CFE0CFA0065EA93 /* AppDelegate.m in Sources */,
 				E206101F1CFE0CFA0065EA93 /* main.m in Sources */,
 				E20610641CFE1ADC0065EA93 /* RecordVideoViewController.m in Sources */,
+				E27D2E601D1876800037669B /* AddOverlayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +592,7 @@
 		};
 		E206104B1CFE0CFB0065EA93 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F7CC5481C1936A76444A3B8 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Face Paint/Info.plist";
@@ -472,6 +604,7 @@
 		};
 		E206104C1CFE0CFB0065EA93 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B94EE1467A69CD5FD170589 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Face Paint/Info.plist";
