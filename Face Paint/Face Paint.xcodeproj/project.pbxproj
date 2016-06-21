@@ -28,11 +28,6 @@
 		E20610641CFE1ADC0065EA93 /* RecordVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20610631CFE1ADC0065EA93 /* RecordVideoViewController.m */; };
 		E20610671CFE1AE90065EA93 /* MergeVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20610661CFE1AE90065EA93 /* MergeVideoViewController.m */; };
 		E20610691CFFA25F0065EA93 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E20610681CFFA25F0065EA93 /* AVKit.framework */; };
-		E27D2E5D1D18766D0037669B /* AddBorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E27D2E5C1D18766D0037669B /* AddBorderViewController.m */; };
-		E27D2E601D1876800037669B /* AddOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E27D2E5F1D1876800037669B /* AddOverlayViewController.m */; };
-		E27D2E631D1876920037669B /* AddSubtitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E27D2E621D1876920037669B /* AddSubtitleViewController.m */; };
-		E27D2E661D18769B0037669B /* AddTiltViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E27D2E651D18769B0037669B /* AddTiltViewController.m */; };
-		E27D2E691D1876A60037669B /* AddAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E27D2E681D1876A60037669B /* AddAnimationViewController.m */; };
 		E2B47AE91D0B2A63009FA846 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2B47AE81D0B2A63009FA846 /* Photos.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,16 +84,6 @@
 		E20610661CFE1AE90065EA93 /* MergeVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergeVideoViewController.m; sourceTree = "<group>"; };
 		E20610681CFFA25F0065EA93 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		E26BFE7D1D0A028D00F5C4CE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		E27D2E5B1D18766D0037669B /* AddBorderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBorderViewController.h; sourceTree = "<group>"; };
-		E27D2E5C1D18766D0037669B /* AddBorderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBorderViewController.m; sourceTree = "<group>"; };
-		E27D2E5E1D1876800037669B /* AddOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddOverlayViewController.h; sourceTree = "<group>"; };
-		E27D2E5F1D1876800037669B /* AddOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddOverlayViewController.m; sourceTree = "<group>"; };
-		E27D2E611D1876920037669B /* AddSubtitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSubtitleViewController.h; sourceTree = "<group>"; };
-		E27D2E621D1876920037669B /* AddSubtitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSubtitleViewController.m; sourceTree = "<group>"; };
-		E27D2E641D18769B0037669B /* AddTiltViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTiltViewController.h; sourceTree = "<group>"; };
-		E27D2E651D18769B0037669B /* AddTiltViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTiltViewController.m; sourceTree = "<group>"; };
-		E27D2E671D1876A60037669B /* AddAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAnimationViewController.h; sourceTree = "<group>"; };
-		E27D2E681D1876A60037669B /* AddAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAnimationViewController.m; sourceTree = "<group>"; };
 		E2B47AE81D0B2A63009FA846 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -237,16 +222,6 @@
 		E27D2E5A1D1874BA0037669B /* Adding overlays and animations */ = {
 			isa = PBXGroup;
 			children = (
-				E27D2E5B1D18766D0037669B /* AddBorderViewController.h */,
-				E27D2E5C1D18766D0037669B /* AddBorderViewController.m */,
-				E27D2E5E1D1876800037669B /* AddOverlayViewController.h */,
-				E27D2E5F1D1876800037669B /* AddOverlayViewController.m */,
-				E27D2E611D1876920037669B /* AddSubtitleViewController.h */,
-				E27D2E621D1876920037669B /* AddSubtitleViewController.m */,
-				E27D2E641D18769B0037669B /* AddTiltViewController.h */,
-				E27D2E651D18769B0037669B /* AddTiltViewController.m */,
-				E27D2E671D1876A60037669B /* AddAnimationViewController.h */,
-				E27D2E681D1876A60037669B /* AddAnimationViewController.m */,
 			);
 			name = "Adding overlays and animations";
 			sourceTree = "<group>";
@@ -444,16 +419,11 @@
 			files = (
 				E20610671CFE1AE90065EA93 /* MergeVideoViewController.m in Sources */,
 				E20610251CFE0CFA0065EA93 /* ViewController.m in Sources */,
-				E27D2E631D1876920037669B /* AddSubtitleViewController.m in Sources */,
-				E27D2E5D1D18766D0037669B /* AddBorderViewController.m in Sources */,
 				E20610611CFE1AC50065EA93 /* PlayVideoViewController.m in Sources */,
 				E206102B1CFE0CFA0065EA93 /* Face_Paint.xcdatamodeld in Sources */,
-				E27D2E661D18769B0037669B /* AddTiltViewController.m in Sources */,
-				E27D2E691D1876A60037669B /* AddAnimationViewController.m in Sources */,
 				E20610221CFE0CFA0065EA93 /* AppDelegate.m in Sources */,
 				E206101F1CFE0CFA0065EA93 /* main.m in Sources */,
 				E20610641CFE1ADC0065EA93 /* RecordVideoViewController.m in Sources */,
-				E27D2E601D1876800037669B /* AddOverlayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
