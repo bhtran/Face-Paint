@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 
+
 @interface ViewController ()
 
 @end
@@ -88,6 +89,7 @@
     
     // 3. Video Track
     AVMutableCompositionTrack *videoTrack = [mixComposition addMutableTrackWithMediaType:AVMediaTypeVideo preferredTrackID:kCMPersistentTrackID_Invalid];
+    
     [videoTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, self.videoAsset.duration) ofTrack:[[self.videoAsset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0] atTime:kCMTimeZero error:nil];
     
     // 3.1 Create AVMutableVideoCompositionInstruction
@@ -96,10 +98,15 @@
     
     // 3.2 Create an AVMutableVideoCompositionLayerInstruction for the video track and fix the orientation.
     AVMutableVideoCompositionLayerInstruction *videoLayerInstruction = [AVMutableVideoCompositionLayerInstruction videoCompositionLayerInstructionWithAssetTrack:videoTrack];
+    
     AVAssetTrack *videoAssetTrack = [[self.videoAsset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0];
+    
     UIImageOrientation videoAssetOrientation_ = UIImageOrientationUp;
+    
     BOOL isVideoAssetPortrait_ = NO;
+    
     CGAffineTransform videoTransform = videoAssetTrack.preferredTransform;
+    
     if (videoTransform.a == 0 && videoTransform.b == 1.0 && videoTransform.c == -1.0 && videoTransform.d ==0) {
         videoAssetOrientation_ = UIImageOrientationRight;
         isVideoAssetPortrait_ = YES;
@@ -114,6 +121,7 @@
     if (videoTransform.a == 1-.0 && videoTransform.b == 0 && videoTransform.c == 0 && videoTransform.d == -1.0) {
         videoAssetOrientation_ = UIImageOrientationDown;
     }
+    
     [videoLayerInstruction setTransform:videoAssetTrack.preferredTransform atTime:kCMTimeZero];
     [videoLayerInstruction setOpacity:0.0 atTime:self.videoAsset.duration];
     
@@ -158,6 +166,40 @@
             [self exportDidFinish:exporter];
         });
     }];
+}
+
+- (void)exportDidFinish:(AVAssetExportSession *)session {
+    
+    UIAlertAction *continueButton = [UIAlertAction actionWithTitle:@"continue" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
+    
+    if (session.status == AVAssetExportSessionStatusCompleted) {
+        NSURL *outputURL = session.outputURL;
+        
+        __block PHObjectPlaceholder *placeholder;
+        
+        [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+           PHAssetChangeRequest *createAssetRequest = [PHAssetChangeRequest creationRequestForAssetFromVideoAtFileURL:outputURL];
+            placeholder = [createAssetRequest placeholderForCreatedAsset];
+        } completionHandler:^(BOOL success, NSError *error) {
+            
+            
+            if (error) {
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error" message:@"There was a error saving the video" preferredStyle:UIAlertControllerStyleAlert];
+                [alert addAction:continueButton];
+                [self presentViewController:alert animated:YES completion:nil];
+            }
+            
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Success" message:@"Video saving success!" preferredStyle:UIAlertControllerStyleAlert];
+            [alert addAction:continueButton];
+            [self presentViewController:alert animated:YES completion:nil];
+
+            
+            
+        }];
+        
+    }
 }
 
 - (void)viewDidLoad {
