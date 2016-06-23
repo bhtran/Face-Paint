@@ -28,6 +28,11 @@
 		E20610641CFE1ADC0065EA93 /* RecordVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20610631CFE1ADC0065EA93 /* RecordVideoViewController.m */; };
 		E20610671CFE1AE90065EA93 /* MergeVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20610661CFE1AE90065EA93 /* MergeVideoViewController.m */; };
 		E20610691CFFA25F0065EA93 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E20610681CFFA25F0065EA93 /* AVKit.framework */; };
+		E23546481D1C47F5008A48EF /* AddBorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E23546471D1C47F5008A48EF /* AddBorderViewController.m */; };
+		E235464B1D1C489D008A48EF /* AddOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E235464A1D1C489D008A48EF /* AddOverlayViewController.m */; };
+		E235464E1D1C48AC008A48EF /* AddSubtitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E235464D1D1C48AC008A48EF /* AddSubtitleViewController.m */; };
+		E23546511D1C48B6008A48EF /* AddTiltViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E23546501D1C48B6008A48EF /* AddTiltViewController.m */; };
+		E23546541D1C48C1008A48EF /* AddAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E23546531D1C48C1008A48EF /* AddAnimationViewController.m */; };
 		E2B47AE91D0B2A63009FA846 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2B47AE81D0B2A63009FA846 /* Photos.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +88,16 @@
 		E20610651CFE1AE90065EA93 /* MergeVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeVideoViewController.h; sourceTree = "<group>"; };
 		E20610661CFE1AE90065EA93 /* MergeVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergeVideoViewController.m; sourceTree = "<group>"; };
 		E20610681CFFA25F0065EA93 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		E23546461D1C47F5008A48EF /* AddBorderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBorderViewController.h; sourceTree = "<group>"; };
+		E23546471D1C47F5008A48EF /* AddBorderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBorderViewController.m; sourceTree = "<group>"; };
+		E23546491D1C489D008A48EF /* AddOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddOverlayViewController.h; sourceTree = "<group>"; };
+		E235464A1D1C489D008A48EF /* AddOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddOverlayViewController.m; sourceTree = "<group>"; };
+		E235464C1D1C48AC008A48EF /* AddSubtitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSubtitleViewController.h; sourceTree = "<group>"; };
+		E235464D1D1C48AC008A48EF /* AddSubtitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSubtitleViewController.m; sourceTree = "<group>"; };
+		E235464F1D1C48B6008A48EF /* AddTiltViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTiltViewController.h; sourceTree = "<group>"; };
+		E23546501D1C48B6008A48EF /* AddTiltViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTiltViewController.m; sourceTree = "<group>"; };
+		E23546521D1C48C1008A48EF /* AddAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAnimationViewController.h; sourceTree = "<group>"; };
+		E23546531D1C48C1008A48EF /* AddAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAnimationViewController.m; sourceTree = "<group>"; };
 		E26BFE7D1D0A028D00F5C4CE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		E2B47AE81D0B2A63009FA846 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -222,6 +237,16 @@
 		E27D2E5A1D1874BA0037669B /* Adding overlays and animations */ = {
 			isa = PBXGroup;
 			children = (
+				E23546461D1C47F5008A48EF /* AddBorderViewController.h */,
+				E23546471D1C47F5008A48EF /* AddBorderViewController.m */,
+				E23546491D1C489D008A48EF /* AddOverlayViewController.h */,
+				E235464A1D1C489D008A48EF /* AddOverlayViewController.m */,
+				E235464C1D1C48AC008A48EF /* AddSubtitleViewController.h */,
+				E235464D1D1C48AC008A48EF /* AddSubtitleViewController.m */,
+				E235464F1D1C48B6008A48EF /* AddTiltViewController.h */,
+				E23546501D1C48B6008A48EF /* AddTiltViewController.m */,
+				E23546521D1C48C1008A48EF /* AddAnimationViewController.h */,
+				E23546531D1C48C1008A48EF /* AddAnimationViewController.m */,
 			);
 			name = "Adding overlays and animations";
 			sourceTree = "<group>";
@@ -419,11 +444,16 @@
 			files = (
 				E20610671CFE1AE90065EA93 /* MergeVideoViewController.m in Sources */,
 				E20610251CFE0CFA0065EA93 /* ViewController.m in Sources */,
+				E235464E1D1C48AC008A48EF /* AddSubtitleViewController.m in Sources */,
+				E23546481D1C47F5008A48EF /* AddBorderViewController.m in Sources */,
 				E20610611CFE1AC50065EA93 /* PlayVideoViewController.m in Sources */,
 				E206102B1CFE0CFA0065EA93 /* Face_Paint.xcdatamodeld in Sources */,
+				E23546511D1C48B6008A48EF /* AddTiltViewController.m in Sources */,
+				E23546541D1C48C1008A48EF /* AddAnimationViewController.m in Sources */,
 				E20610221CFE0CFA0065EA93 /* AppDelegate.m in Sources */,
 				E206101F1CFE0CFA0065EA93 /* main.m in Sources */,
 				E20610641CFE1ADC0065EA93 /* RecordVideoViewController.m in Sources */,
+				E235464B1D1C489D008A48EF /* AddOverlayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

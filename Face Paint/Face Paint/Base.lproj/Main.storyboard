@@ -41,6 +41,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcJ-aZ-Xef">
                                 <rect key="frame" x="20" y="265" width="142" height="30"/>
                                 <state key="normal" title="Add Border To Video"/>
+                                <connections>
+                                    <segue destination="jPh-qC-1wi" kind="show" id="wGX-6J-EgO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luZ-46-ld3">
                                 <rect key="frame" x="20" y="303" width="148" height="30"/>
@@ -186,6 +189,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QJc-ys-6bd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="421" y="-305"/>
+        </scene>
+        <!--Add Border View Controller-->
+        <scene sceneID="6gs-RV-ITW">
+            <objects>
+                <viewController id="jPh-qC-1wi" customClass="AddBorderViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vfx-1O-TX2"/>
+                        <viewControllerLayoutGuide type="bottom" id="OSa-iN-f6k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2hC-Q8-3qR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mrt-qd-iMD">
+                                <rect key="frame" x="228" y="465" width="115" height="30"/>
+                                <state key="normal" title="Generate Output"/>
+                                <connections>
+                                    <action selector="generate:" destination="jPh-qC-1wi" eventType="touchUpInside" id="rM0-RU-1h6"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aXF-mV-ej8">
+                                <rect key="frame" x="136" y="376" width="301" height="29"/>
+                                <segments>
+                                    <segment title="Green"/>
+                                    <segment title="Blue"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Border Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwv-pU-EsR">
+                                <rect key="frame" x="237" y="347" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Border Width" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5v-uQ-wPB">
+                                <rect key="frame" x="232" y="207" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KqS-UM-NoN">
+                                <rect key="frame" x="229" y="111" width="114" height="30"/>
+                                <state key="normal" title="Add Video Asset"/>
+                                <connections>
+                                    <action selector="loadAsset:" destination="jPh-qC-1wi" eventType="touchUpInside" id="SBV-wq-pme"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="YyP-6x-QUQ">
+                                <rect key="frame" x="157" y="236" width="258" height="31"/>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="colorSegment" destination="aXF-mV-ej8" id="6s1-Za-mcj"/>
+                        <outlet property="widthBar" destination="YyP-6x-QUQ" id="IUe-cG-MdS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sCX-x6-Amp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="769" y="411"/>
         </scene>
     </scenes>
 </document>
