@@ -34,6 +34,11 @@
 }
 */
 
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
 -(void)applyVideoEffectsToComposition:(AVMutableVideoComposition *)composition size:(CGSize)size {
     
     // 1. Set up text layer

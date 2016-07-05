@@ -9,5 +9,8 @@
 #import "ViewController.h"
 
 @interface AddAnimationViewController : ViewController
+- (IBAction)loadAsset:(id)sender;
+- (IBAction)generateOutput:(id)sender;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentControl;
 
 @end

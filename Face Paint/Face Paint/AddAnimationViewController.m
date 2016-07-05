@@ -34,4 +34,11 @@
 }
 */
 
+- (IBAction)loadAsset:(id)sender {
+    [self startMediaBrowserFromViewController:self usingDelegate:self];
+}
+
+- (IBAction)generateOutput:(id)sender {
+    [self videoOutput];
+}
 @end

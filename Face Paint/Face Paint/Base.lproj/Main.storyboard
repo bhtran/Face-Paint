@@ -55,6 +55,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H29-mD-hBh">
                                 <rect key="frame" x="20" y="417" width="164" height="30"/>
                                 <state key="normal" title="Add Animation To Video"/>
+                                <connections>
+                                    <segue destination="zMe-Be-4WV" kind="show" id="nBb-Gx-H5T"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3b-j5-uHF">
                                 <rect key="frame" x="20" y="379" width="117" height="30"/>
@@ -300,6 +303,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gpX-u1-RWN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="759" y="1101"/>
+        </scene>
+        <!--Add Animation View Controller-->
+        <scene sceneID="NAz-rW-05r">
+            <objects>
+                <viewController id="zMe-Be-4WV" customClass="AddAnimationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="va0-pg-coC"/>
+                        <viewControllerLayoutGuide type="bottom" id="MQR-xc-scU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wvZ-tX-xK5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RU7-B0-sbK">
+                                <rect key="frame" x="254" y="94" width="76" height="30"/>
+                                <state key="normal" title="Load Asset"/>
+                                <connections>
+                                    <action selector="loadAsset:" destination="zMe-Be-4WV" eventType="touchUpInside" id="4nA-qb-ihP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqA-S7-hqW">
+                                <rect key="frame" x="235" y="317" width="115" height="30"/>
+                                <state key="normal" title="Generate Output"/>
+                                <connections>
+                                    <action selector="generateOutput:" destination="zMe-Be-4WV" eventType="touchUpInside" id="9x3-nL-QIe"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kv9-nF-ZL7">
+                                <rect key="frame" x="201" y="197" width="182" height="29"/>
+                                <segments>
+                                    <segment title="Rotate"/>
+                                    <segment title="Fade"/>
+                                    <segment title="Twinkle"/>
+                                </segments>
+                                <connections>
+                                    <action selector="generateOutput:" destination="zMe-Be-4WV" eventType="valueChanged" id="XPk-J7-kC8"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="segmentControl" destination="kv9-nF-ZL7" id="YeA-oH-krT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IZT-ue-LF0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2121" y="719"/>
         </scene>
         <!--Add Tilt View Controller-->
         <scene sceneID="jSL-W0-qeT">
