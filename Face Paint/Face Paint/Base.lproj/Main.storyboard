@@ -48,6 +48,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pB-Kc-PeH">
                                 <rect key="frame" x="20" y="341" width="148" height="30"/>
                                 <state key="normal" title="Add Subtitle To Video"/>
+                                <connections>
+                                    <segue destination="nPi-9k-GxY" kind="show" id="qWz-6a-Vu0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H29-mD-hBh">
                                 <rect key="frame" x="20" y="417" width="164" height="30"/>
@@ -71,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1117" y="-305"/>
+            <point key="canvasLocation" x="1105" y="-329"/>
         </scene>
         <!--Record Video View Controller-->
         <scene sceneID="2bG-nJ-NyK">
@@ -253,6 +256,48 @@
             </objects>
             <point key="canvasLocation" x="769" y="411"/>
         </scene>
+        <!--Add Subtitle View Controller-->
+        <scene sceneID="sWA-jz-t1D">
+            <objects>
+                <viewController id="nPi-9k-GxY" customClass="AddSubtitleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wcq-oP-dKT"/>
+                        <viewControllerLayoutGuide type="bottom" id="woY-YF-rBv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XAp-pz-E4T">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONy-nQ-Dn9">
+                                <rect key="frame" x="174" y="313" width="115" height="30"/>
+                                <state key="normal" title="Generate Output"/>
+                                <connections>
+                                    <action selector="generateOutput:" destination="nPi-9k-GxY" eventType="touchUpInside" id="pl5-DA-skx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOp-9U-ENr">
+                                <rect key="frame" x="214" y="145" width="70" height="30"/>
+                                <state key="normal" title="Add Asset"/>
+                                <connections>
+                                    <action selector="loadAsset:" destination="nPi-9k-GxY" eventType="touchUpInside" id="nf9-Vd-PcM"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1w3-gQ-bry">
+                                <rect key="frame" x="201" y="238" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="1w3-gQ-bry" id="enp-Ez-1Zv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gpX-u1-RWN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="759" y="1101"/>
+        </scene>
         <!--Add Overlay View Controller-->
         <scene sceneID="Kx9-cf-cbV">
             <objects>
@@ -266,7 +311,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2d5-mf-ytL">
-                                <rect key="frame" x="250" y="144" width="70" height="30"/>
+                                <rect key="frame" x="238" y="145" width="70" height="30"/>
                                 <state key="normal" title="Add Asset"/>
                                 <connections>
                                     <action selector="loadAsset:" destination="waB-oD-gjg" eventType="touchUpInside" id="Bi6-q9-XDz"/>
@@ -280,7 +325,7 @@
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3b-Pe-NSi">
-                                <rect key="frame" x="216" y="308" width="115" height="30"/>
+                                <rect key="frame" x="216" y="285" width="115" height="30"/>
                                 <state key="normal" title="Generate Output"/>
                                 <connections>
                                     <action selector="generateOutput:" destination="waB-oD-gjg" eventType="touchUpInside" id="M44-fd-obr"/>

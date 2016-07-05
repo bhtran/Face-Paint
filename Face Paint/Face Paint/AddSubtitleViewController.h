@@ -10,4 +10,8 @@
 
 @interface AddSubtitleViewController : ViewController
 
+- (IBAction)loadAsset:(id)sender;
+- (IBAction)generateOutput:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+
 @end
