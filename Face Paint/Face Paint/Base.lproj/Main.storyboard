@@ -45,13 +45,6 @@
                                     <segue destination="jPh-qC-1wi" kind="show" id="wGX-6J-EgO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luZ-46-ld3">
-                                <rect key="frame" x="20" y="303" width="148" height="30"/>
-                                <state key="normal" title="Add Overlay To Video"/>
-                                <connections>
-                                    <segue destination="waB-oD-gjg" kind="show" id="uxo-j3-zuO"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pB-Kc-PeH">
                                 <rect key="frame" x="20" y="341" width="148" height="30"/>
                                 <state key="normal" title="Add Subtitle To Video"/>
@@ -63,6 +56,13 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3b-j5-uHF">
                                 <rect key="frame" x="20" y="379" width="117" height="30"/>
                                 <state key="normal" title="Add Tilt To Video"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luZ-46-ld3">
+                                <rect key="frame" x="20" y="303" width="148" height="30"/>
+                                <state key="normal" title="Add Overlay To Video"/>
+                                <connections>
+                                    <segue destination="waB-oD-gjg" kind="show" id="uxo-j3-zuO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -291,7 +291,6 @@
                     </view>
                     <connections>
                         <outlet property="frameSelectControl" destination="C74-vp-pxb" id="TVo-xo-5J3"/>
-                        <outlet property="segmentControl" destination="C74-vp-pxb" id="UQT-xB-LI4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6z-o7-ZLi" userLabel="First Responder" sceneMemberID="firstResponder"/>
