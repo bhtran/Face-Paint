@@ -41,7 +41,7 @@
     [subtitle1Text setFont:@"Helvetica-Bold"];
     [subtitle1Text setFontSize:36];
     [subtitle1Text setFrame:CGRectMake(0, 0, size.width, 100)];
-    [subtitle1Text setString:self.textField.text];
+    [subtitle1Text setString:_textField.text];
     [subtitle1Text setAlignmentMode:kCAAlignmentCenter];
     [subtitle1Text setForegroundColor:[[UIColor whiteColor] CGColor]];
     

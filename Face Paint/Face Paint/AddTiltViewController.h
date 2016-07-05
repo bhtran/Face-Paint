@@ -9,5 +9,8 @@
 #import "ViewController.h"
 
 @interface AddTiltViewController : ViewController
+- (IBAction)loadAsset:(id)sender;
+- (IBAction)generateAsset:(id)sender;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentControl;
 
 @end

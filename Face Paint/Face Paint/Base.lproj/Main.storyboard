@@ -59,6 +59,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3b-j5-uHF">
                                 <rect key="frame" x="20" y="379" width="117" height="30"/>
                                 <state key="normal" title="Add Tilt To Video"/>
+                                <connections>
+                                    <segue destination="5MY-49-uS6" kind="show" id="k7S-d3-M6b"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luZ-46-ld3">
                                 <rect key="frame" x="20" y="303" width="148" height="30"/>
@@ -297,6 +300,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gpX-u1-RWN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="759" y="1101"/>
+        </scene>
+        <!--Add Tilt View Controller-->
+        <scene sceneID="jSL-W0-qeT">
+            <objects>
+                <viewController id="5MY-49-uS6" customClass="AddTiltViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UKn-Ni-3fL"/>
+                        <viewControllerLayoutGuide type="bottom" id="M1O-KA-V2t"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dHe-6S-eZr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDS-Rk-79u">
+                                <rect key="frame" x="240" y="145" width="76" height="30"/>
+                                <state key="normal" title="Load Asset"/>
+                                <connections>
+                                    <action selector="loadAsset:" destination="5MY-49-uS6" eventType="touchUpInside" id="lQ6-X7-N6a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2b-BL-6U9">
+                                <rect key="frame" x="223" y="372" width="110" height="30"/>
+                                <state key="normal" title="Generate Outlet"/>
+                                <connections>
+                                    <action selector="generateAsset:" destination="5MY-49-uS6" eventType="touchUpInside" id="1ZR-a8-EaI"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Wu6-66-7pk">
+                                <rect key="frame" x="182" y="243" width="193" height="29"/>
+                                <segments>
+                                    <segment title="Tilt Backward"/>
+                                    <segment title="Tilt Forward"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="segmentControl" destination="Wu6-66-7pk" id="rRL-11-iIV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hVt-AA-iAB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1443" y="1101"/>
         </scene>
         <!--Add Overlay View Controller-->
         <scene sceneID="Kx9-cf-cbV">
