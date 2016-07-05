@@ -48,6 +48,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luZ-46-ld3">
                                 <rect key="frame" x="20" y="303" width="148" height="30"/>
                                 <state key="normal" title="Add Overlay To Video"/>
+                                <connections>
+                                    <segue destination="waB-oD-gjg" kind="show" id="uxo-j3-zuO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pB-Kc-PeH">
                                 <rect key="frame" x="20" y="341" width="148" height="30"/>
@@ -249,6 +252,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sCX-x6-Amp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="769" y="411"/>
+        </scene>
+        <!--Add Overlay View Controller-->
+        <scene sceneID="Kx9-cf-cbV">
+            <objects>
+                <viewController id="waB-oD-gjg" customClass="AddOverlayViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TmC-pA-X3T"/>
+                        <viewControllerLayoutGuide type="bottom" id="TMY-DM-Og8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TKg-Pu-SmL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2d5-mf-ytL">
+                                <rect key="frame" x="250" y="144" width="70" height="30"/>
+                                <state key="normal" title="Add Asset"/>
+                                <connections>
+                                    <action selector="loadAsset:" destination="waB-oD-gjg" eventType="touchUpInside" id="Bi6-q9-XDz"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="C74-vp-pxb">
+                                <rect key="frame" x="129" y="215" width="289" height="29"/>
+                                <segments>
+                                    <segment title="Overlay 1"/>
+                                    <segment title="Overlay 2"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3b-Pe-NSi">
+                                <rect key="frame" x="216" y="308" width="115" height="30"/>
+                                <state key="normal" title="Generate Output"/>
+                                <connections>
+                                    <action selector="generateOutput:" destination="waB-oD-gjg" eventType="touchUpInside" id="M44-fd-obr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="frameSelectControl" destination="C74-vp-pxb" id="TVo-xo-5J3"/>
+                        <outlet property="segmentControl" destination="C74-vp-pxb" id="UQT-xB-LI4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X6z-o7-ZLi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1443" y="411"/>
         </scene>
     </scenes>
 </document>

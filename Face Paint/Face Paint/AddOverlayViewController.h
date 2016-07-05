@@ -10,4 +10,9 @@
 
 @interface AddOverlayViewController : ViewController
 
+- (IBAction)loadAsset:(id)sender;
+- (IBAction)generateOutput:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UISegmentedControl *frameSelectControl;
+
 @end
