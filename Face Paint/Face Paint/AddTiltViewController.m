@@ -49,10 +49,10 @@
     
     // 3. Pick the direction
     if (_segmentControl.selectedSegmentIndex == 0) {
-        identityTransform.m34 = 1.0 / 1000;
+        identityTransform.m34 = 1.0 / 100;
     }
     else if (_segmentControl.selectedSegmentIndex == 1) {
-        identityTransform.m34 = 1.0 / -10000;
+        identityTransform.m34 = 1.0 / -100;
     }
     
     // 4. Rotate
