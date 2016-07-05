@@ -65,14 +65,22 @@
     [backgroundLayer setContents:(id)[borderImage CGImage]];
     backgroundLayer.frame = CGRectMake(0, 0, size.width, size.height);
     [backgroundLayer setMasksToBounds:YES];
+    NSLog(@"backgroundLayer:%@", NSStringFromCGRect(backgroundLayer.frame));
+
     
+    self.widthBar.minimumValue = 5.0;
+    self.widthBar.maximumValue = 10.0;
     // Video Layer - holds the video and sets the origin to the width of bar, then truncates the video frame to double with the width of the video to fit into space
     CALayer *videoLayer = [CALayer layer];
-    videoLayer.frame = CGRectMake(self.widthBar.value, self.widthBar.value, size.width-(self.widthBar.value*5), size.height-(self.widthBar.value*5));
+    videoLayer.frame = CGRectMake(self.widthBar.value, self.widthBar.value, size.width-(self.widthBar.value*2), size.height-(self.widthBar.value*2));
+    NSLog(@"videoLayer.frame:%@", NSStringFromCGRect(videoLayer.frame));
+
     
     // Parent Layer - parent layer holds both the background later and the video layer. *This layer is rendered full size
     CALayer *parentLayer = [CALayer layer];
+    
     parentLayer.frame = CGRectMake(0, 0, size.width, size.height);
+    NSLog(@"parentLayer.frame:%@", NSStringFromCGRect(parentLayer.frame));
     [parentLayer addSublayer:backgroundLayer];
     [parentLayer addSublayer:videoLayer];
     // Order of layer matters, background has to be added BEFORE the video layer. If you mix it up, you will get a beautiful solid color background.
@@ -80,9 +88,7 @@
     composition.animationTool = [AVVideoCompositionCoreAnimationTool videoCompositionCoreAnimationToolWithPostProcessingAsVideoLayer:videoLayer inLayer:parentLayer];
     // AVVideoCompositionCoreAnimationTool needs to point to where the output should go - videoLayer - and where the input is coming from - parentLayer.
     
-    
 }
-
 
 
 /*
