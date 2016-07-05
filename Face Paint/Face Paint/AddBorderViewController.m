@@ -33,6 +33,58 @@
 }
 
 
+// This method creates a colored image matching the provided size by using standard drawing functions and then returns it.
+- (UIImage *)imageWithColor:(UIColor *)color rectSize:(CGRect)imageSize {
+    
+    CGRect rect = imageSize;
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0); // Does it begin to take in the current image in view?
+    [color setFill]; // Setfill from where?
+    UIRectFill(rect); // Fill with your color
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+    
+}
+
+
+- (void)applyVideoEffectsToComposition:(AVMutableVideoComposition *)composition size:(CGSize)size {
+    
+    UIImage *borderImage = nil;
+    
+    if (_colorSegment.selectedSegmentIndex == 0) {
+        borderImage = [self imageWithColor:[UIColor blueColor] rectSize:CGRectMake(0, 0, size.width, size.height)];
+    } else if (_colorSegment.selectedSegmentIndex == 1) {
+        borderImage = [self imageWithColor:[UIColor greenColor] rectSize:CGRectMake(0, 0, size.width, size.height)];
+    }
+    
+    // AVVideoCompositionCoreAnimationTool - Core Animation class handles video post-processing, needs **three** CALayer objects for video composition. 1. Parent layer, 2. background layer and 3. video layer.
+    
+    // Background layer - sets background layer using colored image
+    CALayer *backgroundLayer = [CALayer layer];
+    [backgroundLayer setContents:(id)[borderImage CGImage]];
+    backgroundLayer.frame = CGRectMake(0, 0, size.width, size.height);
+    [backgroundLayer setMasksToBounds:YES];
+    
+    // Video Layer - holds the video and sets the origin to the width of bar, then truncates the video frame to double with the width of the video to fit into space
+    CALayer *videoLayer = [CALayer layer];
+    videoLayer.frame = CGRectMake(self.widthBar.value, self.widthBar.value, size.width-(self.widthBar.value*5), size.height-(self.widthBar.value*5));
+    
+    // Parent Layer - parent layer holds both the background later and the video layer. *This layer is rendered full size
+    CALayer *parentLayer = [CALayer layer];
+    parentLayer.frame = CGRectMake(0, 0, size.width, size.height);
+    [parentLayer addSublayer:backgroundLayer];
+    [parentLayer addSublayer:videoLayer];
+    // Order of layer matters, background has to be added BEFORE the video layer. If you mix it up, you will get a beautiful solid color background.
+    
+    composition.animationTool = [AVVideoCompositionCoreAnimationTool videoCompositionCoreAnimationToolWithPostProcessingAsVideoLayer:videoLayer inLayer:parentLayer];
+    // AVVideoCompositionCoreAnimationTool needs to point to where the output should go - videoLayer - and where the input is coming from - parentLayer.
+    
+    
+}
+
+
+
 /*
 #pragma mark - Navigation
 

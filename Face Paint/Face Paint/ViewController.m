@@ -16,6 +16,7 @@
 @implementation ViewController
 
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // custom initialization
@@ -35,6 +36,10 @@
     mediaUI.mediaTypes = [[NSArray alloc] initWithObjects:(NSString *) kUTTypeMovie, nil];
     // Hides the controls form moving & scaling pictures, or for trimming movies. To instead show the controls, use YES.
     
+    mediaUI.delegate = self;
+    // When delegate is not set, exportDidFinish: does NOT get called.
+
+    
     // 3. Display image picker
     [controller presentViewController:mediaUI animated:YES completion:^{
         NSLog(@"begin mediaUI picker");
@@ -42,9 +47,11 @@
     return YES;
 }
 
--(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+//-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     // 1. Get media type
     NSString *mediaType = [info objectForKey:UIImagePickerControllerMediaType];
+    NSLog(@"What is mediaType:%@", mediaType);
     
     // 2. Dissmiss image picker
     [self dismissViewControllerAnimated:YES completion:^{
@@ -60,6 +67,7 @@
             [self dismissViewControllerAnimated:YES completion:nil];
             [alert addAction:continueButton];
             [self presentViewController:alert animated:YES completion:nil];
+        
         }];
     }
 }
@@ -82,6 +90,7 @@
         }];
         [alert addAction:continueButton];
         [self presentViewController:alert animated:YES completion:nil];
+        return;
     }
     
     // 2. Create AVMutableComposition object. This object will hold your AVMutableCompositionTrack instaces.
@@ -107,11 +116,11 @@
     
     CGAffineTransform videoTransform = videoAssetTrack.preferredTransform;
     
-    if (videoTransform.a == 0 && videoTransform.b == 1.0 && videoTransform.c == -1.0 && videoTransform.d ==0) {
+    if (videoTransform.a == 0 && videoTransform.b == 1.0 && videoTransform.c == -1.0 && videoTransform.d == 0) {
         videoAssetOrientation_ = UIImageOrientationRight;
         isVideoAssetPortrait_ = YES;
     }
-    if (videoTransform.a == 0 && videoTransform.b == -1.0 && videoTransform.c == 1.0 && videoTransform.d ==0) {
+    if (videoTransform.a == 0 && videoTransform.b == -1.0 && videoTransform.c == 1.0 && videoTransform.d == 0) {
         videoAssetOrientation_ = UIImageOrientationLeft;
         isVideoAssetPortrait_ = YES;
     }
@@ -170,10 +179,6 @@
 
 - (void)exportDidFinish:(AVAssetExportSession *)session {
     
-    UIAlertAction *continueButton = [UIAlertAction actionWithTitle:@"continue" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }];
-    
     if (session.status == AVAssetExportSessionStatusCompleted) {
         NSURL *outputURL = session.outputURL;
         
@@ -184,19 +189,33 @@
             placeholder = [createAssetRequest placeholderForCreatedAsset];
         } completionHandler:^(BOOL success, NSError *error) {
             
-            if (error) {
-                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error" message:@"There was a error saving the video" preferredStyle:UIAlertControllerStyleAlert];
-                [alert addAction:continueButton];
-                [self presentViewController:alert animated:YES completion:nil];
-            }
-            
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Success" message:@"Video saving success!" preferredStyle:UIAlertControllerStyleAlert];
-            [alert addAction:continueButton];
-            [self presentViewController:alert animated:YES completion:nil];
-
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // AlertViewController kept crashing because it was in the another thread, had to go back to main thread
+                
+                if (error) {
+                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error" message:@"There was a error saving the video" preferredStyle:UIAlertControllerStyleAlert];
+                    
+                    UIAlertAction *continueButton = [UIAlertAction actionWithTitle:@"continue" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                        [self dismissViewControllerAnimated:YES completion:nil];
+                    }];
+                    
+                    [alert addAction:continueButton];
+                    [self presentViewController:alert animated:YES completion:nil];
+                } else {
+                    
+                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Success" message:@"Video saving success!" preferredStyle:UIAlertControllerStyleAlert];
+                    
+                    UIAlertAction *continueButton = [UIAlertAction actionWithTitle:@"continue" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                        [self dismissViewControllerAnimated:YES completion:nil];
+                    }];
+                    
+                    [alert addAction:continueButton];
+                    [self presentViewController:alert animated:YES completion:nil];
+                    
+                }
+            });
             
         }];
-        
     }
 }
 
@@ -204,7 +223,6 @@
 
     [super viewDidLoad];
     [self createView];
-    [self sortAndCount];
 
 }
 
