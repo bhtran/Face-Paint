@@ -278,8 +278,6 @@
 
     UIView *superView = self.view;
     
-    selectAndPlayButton.translatesAutoresizingMaskIntoConstraints = NO;
-    
     [superView addSubview:selectAndPlayButton];
     
     [selectAndPlayButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -289,7 +287,7 @@
         make.centerY.equalTo(superView.mas_centerY);
         
     }];
-    
+
     selectAndPlayButton.layer.borderWidth = 2;
     selectAndPlayButton.layer.borderColor = [[UIColor blackColor] CGColor];
     
