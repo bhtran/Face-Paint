@@ -200,7 +200,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QJc-ys-6bd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="421" y="-305"/>
+            <point key="canvasLocation" x="221" y="-329"/>
         </scene>
         <!--Add Border View Controller-->
         <scene sceneID="6gs-RV-ITW">

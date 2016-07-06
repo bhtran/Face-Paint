@@ -15,6 +15,12 @@
 
 @implementation ViewController
 
+- (void)viewDidLoad {
+    
+    [super viewDidLoad];
+    [self createView];
+}
+
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -219,78 +225,38 @@
     }
 }
 
-- (void)viewDidLoad {
 
-    [super viewDidLoad];
-    [self createView];
-
-}
-
-
--(void)sortAndCount {
-    
-    NSString *sortString = @"abcdefghijklmnopqrstuvwxyz_";
-    NSString *sortBlob = @"epqiiqwdiwgyka_vsqtsujeqqicnhyivo_sigwasmkwgsih_akl_gtnkhgikgveidpmtqybpxpnnpbxkwpisgjmdzgh_ojysbtsnsvxvuhguocp_qc_vouxqmg_cetlpmounxnvgldcpem_jodnmklgonocekdkjwkdoilajk_nxujykigsolengqmnqofpseqaamvpsoogaspyhoojennefwvljpvsqtgnceg_hsowqvycjkuxdtfbxfloewkphmvkftjlsasvwid_uqcsgn_ypiqjytygiwyziqdjpxgpuunymadnclpdlmmulitsnqlwciotbmyfuummjynneslnit_lpykdafkpydzkntbud_gigjgmu_uqjjmdzpwteodjpuzndxaqmsjdjjamnwoesajcffkaaoilpyydlkyxauagfcjbabapax_ndlgtpwnud_jpnkiokviqjhyopmjtgtbyoiyfbjdhknimlah_cxfzwspqoscffiyvabtjjuc_liaqbcuomuytdqfy_xaixiiqqdpdsuuimzh_ywwcmodxhfxjplyixotjkeawauxltekptuieekpbokbanumffatbtiacnywhwiqxebnosninpzfjmatvnyuspyeu_ziapvogconld_cxfcytkcp_bvsppz_dw_ndlpkhfzdlxbo_vaflmailjvccgsuclyhojganjqxzmqflpze_hqhlul_ybaagtiuokbzaxhmecolsptiexvvmhbdoelgmcffulcebhlyzd_m_qxkbfvnxykdudpxefsm_aqpqtnhxvswhtowqnbm_mgejjpyumm_mqbkiuulanbmzllmuqlfftmcxtybmijfuwaknefhekwgujpjqgleu_sjtbszotcygiclkwcbmnvgsoqaqqkkgeaslhvfbtlgpnxgpzxp_vyjinlwwfbvtntwogmnpxghabpxxgzlyirrrrrbbcrrrnbjpcrrrqykhrrrscarrrdnlxrrrrtudrrrr_ntrbyrqlddbycypcccqongpgexhnabavrmebeofrxsnrilprveetxaranjyfmrisrewpr_y_lgsrsedbn_rfrieusemhpfa_plkifjipvwaqvnenrrrzybsrbeurbhfrvrrzghr_zpgiyrrrqsnnrrrbhvdrrrqkpdrraqvkeueszfpkj_fm_claw_oetbgurbdocb_rsnzrcyvrvnrvaurbscimurtbriikrfdjlizribdjwkror_gnlzmshwccqcx_huaafbvituxoru_hohxwrrrhnbttrrriyyirrrnibricrxftrrrrvqvrrrrhjorehroldibsmquelwvyjebkolbbnauompgqdhlbnsfbbdiudoeibwstdg_acsazhtgfufidogmyvtya_dfwihtoelucbtlcbaijlcuhfvhesgluiwttsdnqqshnoqumccyqtko_zh_fii_wlsspysdqdpadfvfewlsojavmuaixyxpw_xcwxuatceosdqgmsbbagjmmblouvnywmqqakmmtuasfovol_ogksdukwp_fkxuh_vfhuhfyfvvfqhqxecxsoctcqgpianhtnkbqlltwyhxotfksoewmelxobjgwlyfaeoxsfohhguidoftbsainwovvglynsgjixon_nvuwflsfbca_xnnesvcomceh_gigjxpllckcooagidcpbqxtnejlnlsccocuvcvge_fvjjbyqdkjceia_mkcvbzlzwlxbdjihvpmdcvmssuvktwiqbeivtieol_bu_huumzmlxx_kd_vksmohgzl_fxwfduelqgfkgzxciwmuduozfbaxstxkwegescggkpxfpeenhb_whqhethcateqdvnxhpt__bja_uiyxchmfkblmdwtyp_ktontmufw_isdflelsbgjizxvqbciuadfxxjaqbluofkgkkkhjbvohisfla_cspbmuezqohnyijyimwgdeszutgnaoagbhku_wwdtylbbiyvbpoumgyidw_xwg_fkogabccip_wouclnjcgdpwwxxvvvwkmmbgfeactbcksxqovqthtjfjghijwwhydfieyssbjtfqgqyjnmwfpesljmwapvbptucadontbobnspch_i_dxheklulncdsdnicbnjjjedkaokw_ahcolvbcnmqtoakonpgzjufqlnn_uve_uumaufjasfvfcv_cbcuk_hdzigkahchzfqjphjwcbjwmozyodhu_tsqtafwidgmc_snhhkleyvmzdtawdodzfmekueemnshz_xz";
-    
-    
-    NSMutableArray *letterArray = [[NSMutableArray alloc] init];
-    NSMutableDictionary *letterDictionaryCount = [[NSMutableDictionary alloc] init];
-    
-    for (NSUInteger i = 0; i < sortString.length; i++) {
-        NSString *singleCharacter = [NSString stringWithFormat:@"%C", [sortString characterAtIndex:i]];
-        [letterArray insertObject:singleCharacter atIndex:i];
-        
-      }
-    
-    for (NSString *letter in letterArray) {
-        NSUInteger occurences = [[sortBlob componentsSeparatedByString:letter] count]-1;
-        [letterDictionaryCount setValue:[NSNumber numberWithUnsignedInteger:occurences] forKey:letter];
-    }
-
-    NSLog(@"letterDictionaryCount:%@", letterDictionaryCount);
-    NSArray *sortedArray = [letterDictionaryCount keysSortedByValueUsingComparator:^NSComparisonResult(id obj1, id obj2) {
-        
-        if ([obj1 integerValue] < [obj2 integerValue]) {
-            return (NSComparisonResult)NSOrderedDescending;
-        }
-        if ([obj1 integerValue] > [obj2 integerValue]) {
-            return (NSComparisonResult)NSOrderedAscending;
-        }
-        return (NSComparisonResult)NSOrderedSame;
-    }];
-    
-    
-    
-    NSLog(@"sorted array:%@", sortedArray);
-    
-    
-}
-
-- (void)didReceiveMemoryWarning {
-    
-    [super didReceiveMemoryWarning];
-
-}
 
 -(void)createView {
     
     UIButton *selectAndPlayButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    UIButton *recordAndSaveButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    UIButton *mergeAndSaveButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
 
-    UIView *superView = self.view;
+//    UIView *self.view = self.view;
     
-    [superView addSubview:selectAndPlayButton];
+    [self.view addSubview:selectAndPlayButton];
+    [self.view addSubview:recordAndSaveButton];
+    [self.view addSubview:mergeAndSaveButton];
     
-    [selectAndPlayButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.equalTo(superView.mas_height).with.multipliedBy(.20);
-        make.width.equalTo(superView.mas_width).with.multipliedBy(.20);
-        make.centerX.equalTo(superView.mas_centerX);
-        make.centerY.equalTo(superView.mas_centerY);
+    [recordAndSaveButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top).with.offset(30);
+        make.left.equalTo(self.view.mas_left).with.offset(30);
+        make.right.equalTo(mergeAndSaveButton.mas_left).with.offset(-30);
+        make.bottom.equalTo(self.view.mas_bottom).with.offset(-30);
         
     }];
+    [mergeAndSaveButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top).with.offset(30);
+        make.right.equalTo(self.view.mas_right).with.offset(-30);
+        make.bottom.equalTo(self.view.mas_bottom).with.offset(-30);
+    }];
 
-    selectAndPlayButton.layer.borderWidth = 2;
-    selectAndPlayButton.layer.borderColor = [[UIColor blackColor] CGColor];
+    recordAndSaveButton.layer.borderWidth = 2;
+    recordAndSaveButton.layer.borderColor = [[UIColor blackColor] CGColor];
     
+    mergeAndSaveButton.layer.borderWidth = 2;
+    mergeAndSaveButton.layer.borderColor = [[UIColor blackColor] CGColor];
 }
 
 
