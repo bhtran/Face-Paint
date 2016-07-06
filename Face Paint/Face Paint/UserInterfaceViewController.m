@@ -49,16 +49,24 @@
     [self.view addSubview:mergeAndSaveButton];
     
     [recordAndSaveButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.mas_top).with.offset(30);
+        make.top.equalTo(self.view.mas_top).with.offset(20);
         make.left.equalTo(self.view.mas_left).with.offset(30);
-        make.right.equalTo(mergeAndSaveButton.mas_left).with.offset(-30);
-        make.bottom.equalTo(self.view.mas_bottom).with.offset(-30);
-        
+        make.right.equalTo(selectAndPlayButton.mas_left).with.offset(-20);
+        make.bottom.equalTo(self.view.mas_bottom).with.offset(-20);
     }];
+    
+    [selectAndPlayButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top).with.offset(20);
+        make.left.equalTo(recordAndSaveButton.mas_right).with.offset(20);
+        make.right.equalTo(mergeAndSaveButton.mas_left).with.offset(-20);
+        make.bottom.equalTo(self.view.mas_bottom).with.offset(-20);
+    }];
+    
     [mergeAndSaveButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.mas_top).with.offset(30);
-        make.right.equalTo(self.view.mas_right).with.offset(-30);
-        make.bottom.equalTo(self.view.mas_bottom).with.offset(-30);
+        make.top.equalTo(self.view.mas_top).with.offset(20);
+        make.right.equalTo(self.view.mas_right).with.offset(-20);
+        make.bottom.equalTo(self.view.mas_bottom).with.offset(-20);
+        
     }];
     
     recordAndSaveButton.layer.borderWidth = 2;
@@ -66,6 +74,10 @@
     
     mergeAndSaveButton.layer.borderWidth = 2;
     mergeAndSaveButton.layer.borderColor = [[UIColor blackColor] CGColor];
+    
+    selectAndPlayButton.layer.borderWidth = 2;
+    selectAndPlayButton.layer.borderColor = [[UIColor blackColor] CGColor];
+
 }
 
 
