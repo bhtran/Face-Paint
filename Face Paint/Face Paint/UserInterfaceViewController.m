@@ -105,7 +105,8 @@
     
     // UINavigationBar
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:255.0f/255.0f green:128.0f/255.0f blue:0.0f/255.0f alpha:1]];
-    [self.navigationController setTitle:@"Face Paint"];
+    self.navigationItem.title = @"Face Paint";
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     
 }
 
