@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <FontAwesomeKit/FontAwesomeKit.h>
-#import <Masonry/Masonry.h>
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <AVFoundation/AVFoundation.h>
 #import <Photos/Photos.h>

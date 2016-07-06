@@ -34,6 +34,7 @@
 		E23546511D1C48B6008A48EF /* AddTiltViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E23546501D1C48B6008A48EF /* AddTiltViewController.m */; };
 		E23546541D1C48C1008A48EF /* AddAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E23546531D1C48C1008A48EF /* AddAnimationViewController.m */; };
 		E2B47AE91D0B2A63009FA846 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2B47AE81D0B2A63009FA846 /* Photos.framework */; };
+		E2DDC6C21D2D700700A8ECBA /* UserInterfaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DDC6C11D2D700700A8ECBA /* UserInterfaceViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,8 @@
 		E23546531D1C48C1008A48EF /* AddAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAnimationViewController.m; sourceTree = "<group>"; };
 		E26BFE7D1D0A028D00F5C4CE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		E2B47AE81D0B2A63009FA846 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		E2DDC6C01D2D700700A8ECBA /* UserInterfaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInterfaceViewController.h; sourceTree = "<group>"; };
+		E2DDC6C11D2D700700A8ECBA /* UserInterfaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInterfaceViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +181,8 @@
 				E20610211CFE0CFA0065EA93 /* AppDelegate.m */,
 				E20610231CFE0CFA0065EA93 /* ViewController.h */,
 				E20610241CFE0CFA0065EA93 /* ViewController.m */,
+				E2DDC6C01D2D700700A8ECBA /* UserInterfaceViewController.h */,
+				E2DDC6C11D2D700700A8ECBA /* UserInterfaceViewController.m */,
 				E27D2E5A1D1874BA0037669B /* Adding overlays and animations */,
 				E27D2E591D1874780037669B /* Play, Record and Merge */,
 				E20610311CFE0CFA0065EA93 /* Info.plist */,
@@ -444,6 +449,7 @@
 			files = (
 				E20610671CFE1AE90065EA93 /* MergeVideoViewController.m in Sources */,
 				E20610251CFE0CFA0065EA93 /* ViewController.m in Sources */,
+				E2DDC6C21D2D700700A8ECBA /* UserInterfaceViewController.m in Sources */,
 				E235464E1D1C48AC008A48EF /* AddSubtitleViewController.m in Sources */,
 				E23546481D1C47F5008A48EF /* AddBorderViewController.m in Sources */,
 				E20610611CFE1AC50065EA93 /* PlayVideoViewController.m in Sources */,
