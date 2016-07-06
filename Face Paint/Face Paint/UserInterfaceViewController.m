@@ -102,7 +102,11 @@
     [self.view.layer insertSublayer:theViewGradient atIndex:0];
 
     self.view.backgroundColor = [UIColor colorWithRed:84.0f/255.0f green:84.0f/255.0f blue:84.0f/255.0f alpha:1];
-
+    
+    // UINavigationBar
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:255.0f/255.0f green:128.0f/255.0f blue:0.0f/255.0f alpha:1]];
+    [self.navigationController setTitle:@"Face Paint"];
+    
 }
 
 
