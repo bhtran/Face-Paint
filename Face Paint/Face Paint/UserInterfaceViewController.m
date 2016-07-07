@@ -92,17 +92,42 @@
         make.left.equalTo(overlayButton.mas_right).with.offset(20);
     }];
     
+    [animationButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.height.equalTo(subtitleButton);
+        make.top.equalTo(subtitleButton.mas_top);
+        make.left.equalTo(subtitleButton.mas_right).with.offset(20);
+    }];
+    
+    [tiltButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.and.height.equalTo(animationButton);
+        make.top.equalTo(animationButton.mas_bottom).with.offset(20);
+        make.left.equalTo(overlayButton.mas_left);
+    }];
+    
+//    [borderButton mas_makeConstraints:^(MASConstraintMaker *make) {
+//        <#code#>
+//    }];
+    
     recordAndSaveButton.layer.borderWidth = 2;
     mergeAndSaveButton.layer.borderWidth = 2;
     selectAndPlayButton.layer.borderWidth = 2;
     overlayButton.layer.borderWidth = 2;
     subtitleButton.layer.borderWidth = 2;
+    animationButton.layer.borderWidth = 2;
+    tiltButton.layer.borderWidth = 2;
+    borderButton.layer.borderWidth = 2;
+
     
     recordAndSaveButton.layer.borderColor = [[UIColor blueColor] CGColor];
     mergeAndSaveButton.layer.borderColor = [[UIColor redColor] CGColor];
     selectAndPlayButton.layer.borderColor = [[UIColor blackColor] CGColor];
     overlayButton.layer.borderColor = [[UIColor yellowColor] CGColor];
     subtitleButton.layer.borderColor = [[UIColor greenColor] CGColor];
+    animationButton.layer.borderColor = [[UIColor grayColor] CGColor];
+    tiltButton.layer.borderColor = [[UIColor grayColor] CGColor];
+    borderButton.layer.borderColor = [[UIColor grayColor] CGColor];
+
+    
 
     
     // Gradient Background
