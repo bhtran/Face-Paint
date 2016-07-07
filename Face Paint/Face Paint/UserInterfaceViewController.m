@@ -88,7 +88,7 @@
     
     [subtitleButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(overlayButton.mas_top);
-        make.width.and.height.equalTo(overlayButton);
+        make.width.height.equalTo(overlayButton);
         make.left.equalTo(overlayButton.mas_right).with.offset(20);
     }];
     
@@ -99,14 +99,16 @@
     }];
     
     [tiltButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.and.height.equalTo(animationButton);
+        make.width.height.equalTo(animationButton);
         make.top.equalTo(animationButton.mas_bottom).with.offset(20);
-        make.left.equalTo(overlayButton.mas_left);
+        make.right.equalTo(self.view.mas_centerX).with.offset(-20);
     }];
     
-//    [borderButton mas_makeConstraints:^(MASConstraintMaker *make) {
-//        <#code#>
-//    }];
+    [borderButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.height.equalTo(tiltButton);
+        make.top.equalTo(tiltButton.mas_top);
+        make.left.equalTo(self.view.mas_centerX).with.offset(20);
+    }];
     
     recordAndSaveButton.layer.borderWidth = 2;
     mergeAndSaveButton.layer.borderWidth = 2;
@@ -125,7 +127,7 @@
     subtitleButton.layer.borderColor = [[UIColor greenColor] CGColor];
     animationButton.layer.borderColor = [[UIColor grayColor] CGColor];
     tiltButton.layer.borderColor = [[UIColor grayColor] CGColor];
-    borderButton.layer.borderColor = [[UIColor grayColor] CGColor];
+    borderButton.layer.borderColor = [[UIColor cyanColor] CGColor];
 
     
 
