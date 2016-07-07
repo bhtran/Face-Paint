@@ -38,6 +38,8 @@
 
 -(void)createView {
     
+    
+    // Adding Buttons
     UIButton *selectAndPlayButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
     UIButton *recordAndSaveButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
     UIButton *mergeAndSaveButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
@@ -46,8 +48,6 @@
     UIButton *animationButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
     UIButton *tiltButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
     UIButton *borderButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
-
-    //    UIView *self.view = self.view;
     
     [self.view addSubview:recordAndSaveButton];
     [self.view addSubview:selectAndPlayButton];
@@ -59,24 +59,25 @@
     [self.view addSubview:borderButton];
 
     [recordAndSaveButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.mas_top).with.offset(20);
-        make.left.equalTo(self.view.mas_left).with.offset(20);
+        make.top.left.equalTo(self.view.mas_top).with.offset(20);
         make.right.equalTo(selectAndPlayButton.mas_left).with.offset(-20);
         make.height.equalTo(self.view).with.multipliedBy(.20);
+        make.width.equalTo(selectAndPlayButton.mas_width);
     }];
     
     [selectAndPlayButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.mas_top).with.offset(20);
+        make.top.equalTo(recordAndSaveButton.mas_top);
         make.left.equalTo(recordAndSaveButton.mas_right).with.offset(20);
         make.right.equalTo(mergeAndSaveButton.mas_left).with.offset(-20);
-        make.bottom.equalTo(recordAndSaveButton.mas_bottom);
+        make.height.equalTo(recordAndSaveButton);
+        make.width.equalTo(mergeAndSaveButton);
     }];
     
     [mergeAndSaveButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view.mas_top).with.offset(20);
         make.right.equalTo(self.view.mas_right).with.offset(-20);
         make.bottom.equalTo(recordAndSaveButton.mas_bottom);
-        
+        make.width.equalTo(recordAndSaveButton);
     }];
     
     [overlayButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -101,13 +102,13 @@
     [tiltButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.height.equalTo(animationButton);
         make.top.equalTo(animationButton.mas_bottom).with.offset(20);
-        make.right.equalTo(self.view.mas_centerX).with.offset(-20);
+        make.right.equalTo(self.view.mas_centerX).with.offset(-10);
     }];
     
     [borderButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.height.equalTo(tiltButton);
         make.top.equalTo(tiltButton.mas_top);
-        make.left.equalTo(self.view.mas_centerX).with.offset(20);
+        make.left.equalTo(self.view.mas_centerX).with.offset(10);
     }];
     
     recordAndSaveButton.layer.borderWidth = 2;
@@ -118,7 +119,6 @@
     animationButton.layer.borderWidth = 2;
     tiltButton.layer.borderWidth = 2;
     borderButton.layer.borderWidth = 2;
-
     
     recordAndSaveButton.layer.borderColor = [[UIColor blueColor] CGColor];
     mergeAndSaveButton.layer.borderColor = [[UIColor redColor] CGColor];
@@ -129,9 +129,6 @@
     tiltButton.layer.borderColor = [[UIColor grayColor] CGColor];
     borderButton.layer.borderColor = [[UIColor cyanColor] CGColor];
 
-    
-
-    
     // Gradient Background
     UIColor *topColor = [UIColor colorWithRed:222.0f/255.0f green:222.0f/255.0f blue:222.0f/255.0f alpha:.85];
     UIColor *bottomColor = [UIColor colorWithRed:255.0f/255.0f green:251.0f/255.0f blue:232.0f/255.0f alpha:.20];
@@ -148,7 +145,6 @@
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:255.0f/255.0f green:128.0f/255.0f blue:0.0f/255.0f alpha:1]];
     self.navigationItem.title = @"Face Paint";
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
-    
     
 }
 
