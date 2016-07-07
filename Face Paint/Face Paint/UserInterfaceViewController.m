@@ -59,7 +59,8 @@
     [self.view addSubview:borderButton];
 
     [recordAndSaveButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.equalTo(self.view.mas_top).with.offset(20);
+        make.top.equalTo(self.view.mas_top).with.offset(150);
+        make.left.equalTo(self.view.mas_left).with.offset(20);
         make.height.equalTo(self.view).with.multipliedBy(.20);
         make.width.equalTo(selectAndPlayButton.mas_width);
     }];
