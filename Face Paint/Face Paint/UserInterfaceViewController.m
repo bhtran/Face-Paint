@@ -38,7 +38,6 @@
 
 -(void)createView {
     
-    
     // Adding Buttons
     UIButton *selectAndPlayButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
     UIButton *recordAndSaveButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
@@ -58,10 +57,11 @@
     [self.view addSubview:tiltButton];
     [self.view addSubview:borderButton];
 
+    // Button Constraints
     [recordAndSaveButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view.mas_top).with.offset(150);
         make.left.equalTo(self.view.mas_left).with.offset(20);
-        make.height.equalTo(self.view).with.multipliedBy(.20);
+        make.height.equalTo(self.view).with.multipliedBy(.15);
         make.width.equalTo(selectAndPlayButton.mas_width);
     }];
     
@@ -102,10 +102,11 @@
     
     [borderButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.height.equalTo(tiltButton);
-        make.top.equalTo(tiltButton.mas_top);
+        make.top.equalTo(tiltButton);
         make.left.equalTo(self.view.mas_centerX).with.offset(10);
     }];
     
+    // Button Borders
     recordAndSaveButton.layer.borderWidth = 2;
     mergeAndSaveButton.layer.borderWidth = 2;
     selectAndPlayButton.layer.borderWidth = 2;
@@ -115,6 +116,7 @@
     tiltButton.layer.borderWidth = 2;
     borderButton.layer.borderWidth = 2;
     
+    // Button Border Colors
     recordAndSaveButton.layer.borderColor = [[UIColor blueColor] CGColor];
     mergeAndSaveButton.layer.borderColor = [[UIColor redColor] CGColor];
     selectAndPlayButton.layer.borderColor = [[UIColor blackColor] CGColor];
@@ -142,6 +144,8 @@
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     
 }
+
+
 
 
 @end
