@@ -49,8 +49,8 @@
 
     //    UIView *self.view = self.view;
     
-    [self.view addSubview:selectAndPlayButton];
     [self.view addSubview:recordAndSaveButton];
+    [self.view addSubview:selectAndPlayButton];
     [self.view addSubview:mergeAndSaveButton];
     [self.view addSubview:overlayButton];
     [self.view addSubview:subtitleButton];
@@ -62,7 +62,7 @@
         make.top.equalTo(self.view.mas_top).with.offset(20);
         make.left.equalTo(self.view.mas_left).with.offset(20);
         make.right.equalTo(selectAndPlayButton.mas_left).with.offset(-20);
-        make.bottom.equalTo(self.view.mas_bottom).with.offset(-20);
+        make.height.equalTo(self.view).with.multipliedBy(.20);
     }];
     
     [selectAndPlayButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -79,17 +79,31 @@
         
     }];
     
-//    [overlayButton mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo()
-//    }];
-//    
+    [overlayButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(recordAndSaveButton.mas_bottom).with.offset(20);
+        make.width.equalTo(recordAndSaveButton.mas_width);
+        make.height.equalTo(recordAndSaveButton.mas_height);
+        make.left.equalTo(recordAndSaveButton.mas_left);
+    }];
+    
+    [subtitleButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(overlayButton.mas_top);
+        make.width.and.height.equalTo(overlayButton);
+        make.left.equalTo(overlayButton.mas_right).with.offset(20);
+    }];
+    
     recordAndSaveButton.layer.borderWidth = 2;
     mergeAndSaveButton.layer.borderWidth = 2;
     selectAndPlayButton.layer.borderWidth = 2;
-
+    overlayButton.layer.borderWidth = 2;
+    subtitleButton.layer.borderWidth = 2;
+    
     recordAndSaveButton.layer.borderColor = [[UIColor blueColor] CGColor];
     mergeAndSaveButton.layer.borderColor = [[UIColor redColor] CGColor];
     selectAndPlayButton.layer.borderColor = [[UIColor blackColor] CGColor];
+    overlayButton.layer.borderColor = [[UIColor yellowColor] CGColor];
+    subtitleButton.layer.borderColor = [[UIColor greenColor] CGColor];
+
     
     // Gradient Background
     UIColor *topColor = [UIColor colorWithRed:222.0f/255.0f green:222.0f/255.0f blue:222.0f/255.0f alpha:.85];
@@ -107,6 +121,7 @@
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:255.0f/255.0f green:128.0f/255.0f blue:0.0f/255.0f alpha:1]];
     self.navigationItem.title = @"Face Paint";
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    
     
 }
 
