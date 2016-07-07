@@ -60,48 +60,42 @@
 
     [recordAndSaveButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.equalTo(self.view.mas_top).with.offset(20);
-        make.right.equalTo(selectAndPlayButton.mas_left).with.offset(-20);
         make.height.equalTo(self.view).with.multipliedBy(.20);
         make.width.equalTo(selectAndPlayButton.mas_width);
     }];
     
     [selectAndPlayButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(recordAndSaveButton.mas_top);
+        make.top.equalTo(recordAndSaveButton);
         make.left.equalTo(recordAndSaveButton.mas_right).with.offset(20);
         make.right.equalTo(mergeAndSaveButton.mas_left).with.offset(-20);
-        make.height.equalTo(recordAndSaveButton);
-        make.width.equalTo(mergeAndSaveButton);
+        make.width.height.equalTo(mergeAndSaveButton);
     }];
     
     [mergeAndSaveButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.mas_top).with.offset(20);
-        make.right.equalTo(self.view.mas_right).with.offset(-20);
-        make.bottom.equalTo(recordAndSaveButton.mas_bottom);
-        make.width.equalTo(recordAndSaveButton);
+        make.top.equalTo(recordAndSaveButton);
+        make.right.equalTo(self.view).with.offset(-20);
+        make.width.height.equalTo(recordAndSaveButton);
     }];
     
     [overlayButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(recordAndSaveButton.mas_bottom).with.offset(20);
-        make.width.equalTo(recordAndSaveButton.mas_width);
-        make.height.equalTo(recordAndSaveButton.mas_height);
-        make.left.equalTo(recordAndSaveButton.mas_left);
+        make.width.height.equalTo(recordAndSaveButton);
+        make.left.equalTo(recordAndSaveButton);
     }];
     
     [subtitleButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(overlayButton.mas_top);
-        make.width.height.equalTo(overlayButton);
+        make.top.width.height.equalTo(overlayButton);
         make.left.equalTo(overlayButton.mas_right).with.offset(20);
     }];
     
     [animationButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.height.equalTo(subtitleButton);
-        make.top.equalTo(subtitleButton.mas_top);
+        make.top.width.height.equalTo(subtitleButton);
         make.left.equalTo(subtitleButton.mas_right).with.offset(20);
     }];
     
     [tiltButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.height.equalTo(animationButton);
         make.top.equalTo(animationButton.mas_bottom).with.offset(20);
+        make.width.height.equalTo(animationButton);
         make.right.equalTo(self.view.mas_centerX).with.offset(-10);
     }];
     
